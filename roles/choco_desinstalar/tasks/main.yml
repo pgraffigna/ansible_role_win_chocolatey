@@ -1,0 +1,5 @@
+---
+- name: Desinstalar aplicaciones 
+  win_chocolatey:
+    name: ['notepadplusplus','notepadplusplus.install']
+    state: absent

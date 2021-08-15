@@ -1,0 +1,22 @@
+---
+- name: Instalación de multiples aplicaciones
+  win_chocolatey:
+    name: '{{ item }}'
+    state: present
+  loop:
+  - openvpn
+  - 7zip 
+  - libreoffice-still
+  - bsplayer
+  - brave
+  - totalcommander
+
+#- name: Instalación de multiples aplicaciones como superusuario
+#  win_chocolatey:
+#    name: '{{ item }}'
+#  loop:
+#  - paquete
+#  - paquete
+#  become: yes
+#  become_user: '{{ superusuario }}'
+#  become_method: runas

@@ -1,0 +1,7 @@
+---
+- name: Gather facts from chocolatey
+  win_chocolatey_facts:
+
+- name: Displays the Packages
+  debug:
+    var: ansible_chocolatey.packages
